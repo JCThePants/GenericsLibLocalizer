@@ -5,9 +5,9 @@ Currently under heavy development and subject to large changes.
 
 GenericsLib localization file generator. Parses jar class files for GenericsLib @Localizable annotated string fields to create a language localization key file that should be inserted into the jars resource directory. If the jar properly implements GenericsLib localization, the key file will allow changing hard coded text that is localizable.
 
-In order to change the the localization, the key file should be copied (but not changed in any way) and the copy should be named lang.txt. The text entries in lang.txt can then be changed and inserted into the jars resource directory which will change all the localizable text to the entries in the lang.txt file.
+In order to change the localization, the key file should be copied (but not changed in any way) and the copy should be named lang.txt. The text entries in lang.txt can then be changed and inserted into the jars resource directory which will change all the localizable text to the entries in the lang.txt file.
 
-The lang.key.txt file and the lang.txt file follow a format. Each line represents a single entry so line returns in text should be represented with \n, not an actual return.
+The lang.key.txt file and the lang.txt file follow a format. Each line represents a single entry so new lines in text should be represented with \n, not an actual new line.
 
 A line that begins with "version> " (without the quotes) specifies the file version. Multiple versions can be set using comma delimiters or multiple "version> " lines can be inserted. The lang.key.txt file must contain all versions specified by the lang.txt file.
 
