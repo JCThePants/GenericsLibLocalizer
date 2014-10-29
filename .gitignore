@@ -1,0 +1,10 @@
+bin/
+*.jar
+*.war
+*.ear
+hs_err_pid*
+rebel*.xml
+META-INF/
+.gradle/
+build/
+*.iml
