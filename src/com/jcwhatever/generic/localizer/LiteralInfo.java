@@ -22,7 +22,7 @@
  */
 
 
-package com.jcwhatever.bukkit.generic.localizer;
+package com.jcwhatever.generic.localizer;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

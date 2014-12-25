@@ -96,7 +96,7 @@ jar {
     manifest {
         attributes("Built-By": buildBy,
                 "Created-By": System.properties['java.vm.version'] + " (" + System.properties['java.vm.vendor'] + ")",
-                "Main-Class": "com.jcwhatever.bukkit.generic.localizer.Main",
+                "Main-Class": "Main",
                 "Implementation-Title": projectName,
                 "Implementation-Version": version)
     }
@@ -117,7 +117,7 @@ task simpleNamedJar(type: Jar) {
     manifest {
         attributes("Built-By": buildBy,
                 "Created-By": System.properties['java.vm.version'] + " (" + System.properties['java.vm.vendor'] + ")",
-                "Main-Class": "com.jcwhatever.bukkit.generic.localizer.Main",
+                "Main-Class": "Main",
                 "Implementation-Title": projectName,
                 "Implementation-Version": version)
     }

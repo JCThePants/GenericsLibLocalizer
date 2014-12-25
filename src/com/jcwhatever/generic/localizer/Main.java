@@ -22,7 +22,7 @@
  */
 
 
-package com.jcwhatever.bukkit.generic.localizer;
+package com.jcwhatever.generic.localizer;
 
 import java.io.File;
 import java.io.IOException;

@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.jcwhatever.bukkit.generic.localizer;
+package com.jcwhatever.generic.localizer;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.tree.AnnotationNode;
