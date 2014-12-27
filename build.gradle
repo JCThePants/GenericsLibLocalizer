@@ -1,4 +1,4 @@
-def projectName = 'GenericsLibLocalizer'
+def projectName = 'NucleusLocalizer'
 def majorVersion = '0'
 def buildBy = null
 def providedDepends = null

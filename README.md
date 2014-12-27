@@ -1,9 +1,9 @@
-GenericsLibLocalizer
+NucleusLocalizer
 ====================
 
 Currently under heavy development and subject to large changes.
 
-GenericsLib localization file generator. Parses jar class files for GenericsLib @Localizable annotated string fields to create a language localization key file that should be inserted into the jars resource directory. If the jar properly implements GenericsLib localization, the key file will allow changing hard coded text that is localizable.
+NucleusFramework localization file generator. Parses jar class files for NucleusFramework's @Localizable annotated string fields to create a language localization key file that should be inserted into the jars resource directory. If the jar properly implements NucleusFramework localization, the key file will allow changing hard coded text that is localizable.
 
 In order to change the localization, the key file should be copied (but not changed in any way) and the copy should be named lang.txt. The text entries in lang.txt can then be changed and inserted into the jars resource directory which will change all the localizable text to the entries in the lang.txt file.
 
@@ -17,7 +17,7 @@ A line that begins with a number, a right angle and a space (i.e. "10> ") indica
 
 In the lang.txt file, not all localization lines are required. You may only include the lines that are actually changed, so long as the index number remains the same.
 
-Plugins that implement GenericsLib LanguageManager can also merge external language files, though the plugin must provide a file to merge via its own implementation.
+Plugins that implement NucleusFramework's LanguageManager can also merge external language files, though the plugin must provide a file to merge via its own implementation.
 
 Dependencies:
 ASM library - ByteCode manipulation and analysis framework
