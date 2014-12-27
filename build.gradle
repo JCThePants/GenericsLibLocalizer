@@ -2,6 +2,8 @@ def projectName = 'NucleusLocalizer'
 def majorVersion = '0'
 def minorVersion = '0'
 def buildBy = null
+def mavenRepositories = [
+]
 def providedDependsFiles = null
 def providedDepends = null
 def compileDependsFiles = [
@@ -90,9 +92,11 @@ buildscript {
 repositories {
     mavenCentral()
 
-    for (repo in mavenRepositories) {
-        maven {
-            url repo
+    if (mavenRepositories) {
+        for (repo in mavenRepositories) {
+            maven {
+                url repo
+            }
         }
     }
 }
