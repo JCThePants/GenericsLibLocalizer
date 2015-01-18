@@ -165,7 +165,7 @@ dependencies {
             compile(depend) {
 
                 // flag dependency as changing so it is re-downloaded if cached
-                changing = snapshotDepends && snapshotDepends.contains(depend)
+                changing = changing || (snapshotDepends && snapshotDepends.contains(depend))
             }
         }
     }
@@ -176,7 +176,7 @@ dependencies {
             provided(depend) {
 
                 // flag dependency as changing so it is re-downloaded if cached
-                changing = snapshotDepends && snapshotDepends.contains(depend)
+                changing = changing || (snapshotDepends && snapshotDepends.contains(depend))
             }
         }
     }
@@ -187,7 +187,7 @@ dependencies {
             testCompile(depend) {
 
                 // flag dependency as changing so it is re-downloaded if cached
-                changing = snapshotDepends && snapshotDepends.contains(depend)
+                changing = changing || (snapshotDepends && snapshotDepends.contains(depend))
             }
         }
     }
@@ -198,7 +198,7 @@ dependencies {
             testRuntime(depend) {
 
                 // flag dependency as changing so it is re-downloaded if cached
-                changing = snapshotDepends && snapshotDepends.contains(depend)
+                changing = changing || (snapshotDepends && snapshotDepends.contains(depend))
             }
         }
     }
