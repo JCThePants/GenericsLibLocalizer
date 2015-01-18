@@ -19,7 +19,7 @@ def providedDepends = null
 // compile dependencies (compiled into output jar)
 def compileDependsFiles = null
 def compileDepends = [
-        'org.ow2.asm:asm:5.0.3'
+        'asm:asm-tree:3.0'
 ]
 
 // include files in output jar
@@ -164,7 +164,7 @@ dependencies {
     // add Maven compile dependencies (compiled into output jar)
     if (compileDepends) {
         for (depend in compileDepends) {
-            compile(depend) {
+            compile([depend]) {
 
                 // flag dependency as changing so it is re-downloaded if cached
                 changing = changing || (snapshotDepends && snapshotDepends.contains(depend))
