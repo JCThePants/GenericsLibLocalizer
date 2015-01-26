@@ -29,7 +29,7 @@ def includeFiles = [
 
 // include test classes
 def testIncludes = [
-        'com/jcwhatever/nucleus/localizerLanguageGeneratorTest.class'
+        'com/jcwhatever/nucleus/localizer/LanguageGeneratorTest.class'
 ]
 
 // exclude test classes
