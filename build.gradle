@@ -28,19 +28,21 @@ def includeFiles = [
 ]
 
 // include test classes
-def testIncludes = null
+def testIncludes = [
+        'com/jcwhatever/nucleus/localizerLanguageGeneratorTest.class'
+]
 
 // exclude test classes
 def testExcludes = null
 
 // test dependencies
-def testDepends = null
+def testDepends = [
+        'junit:junit:4.+',
+]
 def testRuntimeDepends = null
 
 // dependencies that should always be downloaded (cached for 30 seconds)
-def snapshotDepends = [
-        'org.ow2.asm:asm:5.0.3'
-]
+def snapshotDepends = null
 
 /**
  * MAVEN TASK SETTINGS

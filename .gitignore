@@ -8,3 +8,4 @@ META-INF/
 .gradle/
 build/
 *.iml
+!NucleusLocalizerTest.jar

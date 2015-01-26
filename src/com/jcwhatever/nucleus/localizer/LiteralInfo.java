@@ -27,25 +27,51 @@ package com.jcwhatever.nucleus.localizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Stores information about a localizable literal.
+ */
 public class LiteralInfo {
 
     private static final Pattern PATTERN_FILEPATH_SLASH = Pattern.compile("[\\/\\\\]");
 
     private final String _literal;
-    private final String _fieldDescriptor;
+    private final String _comment;
 
-    LiteralInfo(String literal, String fieldDescriptor) {
+    /**
+     * Constructor.
+     *
+     * @param literal  The literal text that can be localized.
+     * @param comment  Comment to be included int output key file to give context
+     *                 information about the text.
+     */
+    LiteralInfo(String literal, String comment) {
         _literal = literal;
 
-        Matcher matcher = PATTERN_FILEPATH_SLASH.matcher(fieldDescriptor);
-        _fieldDescriptor = matcher.replaceAll(".");
+        Matcher matcher = PATTERN_FILEPATH_SLASH.matcher(comment);
+        _comment = matcher.replaceAll(".");
     }
 
+    /**
+     * Get the localizable literal text.
+     */
     public String getLiteral() {
         return _literal;
     }
 
-    public String getFieldName() {
-        return _fieldDescriptor;
+    /**
+     * Get the text comment.
+     */
+    public String getComment() {
+        return _comment;
+    }
+
+    @Override
+    public int hashCode() {
+        return _literal.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof LiteralInfo && ((LiteralInfo) obj)._literal.equals(_literal);
     }
 }
