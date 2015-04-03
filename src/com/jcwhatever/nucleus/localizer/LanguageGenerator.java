@@ -51,6 +51,9 @@ import java.util.regex.Pattern;
  */
 public class LanguageGenerator {
 
+    private static final String LOCALIZABLE_CLASSPATH =
+            "Lcom/jcwhatever/nucleus/managed/language/Localizable;";
+
     private static Pattern NEW_LINE = Pattern.compile("\n");
 
     private final File _jarFile;
@@ -155,7 +158,7 @@ public class LanguageGenerator {
     }
 
     private boolean isLocalizableAnnotation(String annotationName) {
-        return annotationName.equals("Lcom/jcwhatever/nucleus/utils/language/Localizable;");
+        return annotationName.equals(LOCALIZABLE_CLASSPATH);
     }
 
     // get localizable string literals from class files
