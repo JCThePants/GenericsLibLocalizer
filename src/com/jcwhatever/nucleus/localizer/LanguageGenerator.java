@@ -35,10 +35,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.jar.JarEntry;
@@ -168,9 +169,9 @@ public class LanguageGenerator {
 
         JarFile jarFile = new JarFile(file);
         Enumeration<JarEntry> entries = jarFile.entries();
-        List<LiteralInfo> results = new LinkedList<>();
+        List<LiteralInfo> results = new ArrayList<>(50);
 
-        LinkedList<ClassNode> parseQueue = new LinkedList<>();
+        Deque<ClassNode> parseQueue = new ArrayDeque<>(10);
         Map<String, AnnotationInfo> annotations = new HashMap<>(10);
 
         while (entries.hasMoreElements()) {
